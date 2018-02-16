@@ -1,0 +1,32 @@
+{
+  "name": "template-node",
+  "version": "1.0.0",
+  "description": "A template for a Node RESTful Web Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebastianUdden/template-node.git"
+  },
+  "author": "Sebastian Udden <sebastian.udden@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SebastianUdden/template-node/issues"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "node_modules/**"
+    ],
+    "verbose": false
+  },
+  "homepage": "https://github.com/SebastianUdden/template-node#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.6",
+    "nodemon": "^1.14.12"
+  }
+}
