@@ -10,6 +10,14 @@ var Movie = require('./models/movieModel');
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", '*'); //<-- you can change this with a specific url like https://sebastianudden.github.io/Winter-Games or http://localhost:4200
+    res.header("Access-Control-Allow-Credentials", true);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+    next();
+});
+
 Movie.find(function (err, movies) {
     if (err) return console.error(err);
     console.log('+++++++++++++++++++++++++ movies ++++++++++++++++++++');
