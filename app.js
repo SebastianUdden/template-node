@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 var port = process.env.PORT || 3000;
-var db = require('./db/db-connection');
+var db = require('./db/dbConnection');
 var Movie = require('./models/movieModel');
 
 app.use(bodyParser.urlencoded({ extended:true }));
