@@ -22,7 +22,6 @@ Movie.find(function (err, movies) {
 var movieRouter = require('./routes/movieRoutes')(Movie);
 
 app.use('/api/movies', movieRouter);
-// app.use('/api/directors', directorRouter);
 
 app.get('/', function(req, res) {
     res.send('Welcome to template-node, a showcase for a RESTful API service');
