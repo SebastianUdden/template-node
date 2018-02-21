@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
-    "prebuild": "git add -A",
+    "prebuild": "concurrently \"git add -A\" \"git commit -am \"Updated master branch\"\"",
     "build": "concurrently \"git push\" \"git push heroku master\""
   },
   "repository": {
