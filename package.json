@@ -5,8 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
-    "prebuild": "concurrently \"git add -A\" \"git commit -am \"Updated master branch\"\"",
-    "build": "concurrently \"git push\" \"git push heroku master\""
+    "precommit": "git add -A",
+    "commit": "git commit -am \"Updated master branch\"",
+    "postcommit": "git push",
+    "deploy": "git push heroku master",
+    "postdeploy": "heroku ps:scale web=1",
+    "prebuild": "npm run commit",
+    "build": "npm run deploy"
   },
   "repository": {
     "type": "git",
