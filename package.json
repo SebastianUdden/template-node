@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "precommit": "git add -A",
-    "commit": "git commit -am \"Updated master branch\"",
+    "commit": "git commit -am \"$c\"",
     "postcommit": "git push",
     "deploy": "git push heroku master",
     "postdeploy": "heroku ps:scale web=1",
